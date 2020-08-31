@@ -1,11 +1,11 @@
-# OpenapiClient::TasksApi
+# Tecniplast::TasksApi
 
 All URIs are relative to *https://localhost/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**jobs_get**](TasksApi.md#jobs_get) | **GET** /jobs | get list of tasks planned for today
-[**jobs_uuid_complete_post**](TasksApi.md#jobs_uuid_complete_post) | **POST** /jobs/{uuid}/complete | report task completion
+[**jobs_uuid_close_post**](TasksApi.md#jobs_uuid_close_post) | **POST** /jobs/{uuid}/close | report task completion
 
 
 # **jobs_get**
@@ -16,19 +16,22 @@ get list of tasks planned for today
 ### Example
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'tecniplast'
 
-api_instance = OpenapiClient::TasksApi.new
+api_instance = Tecniplast::TasksApi.new
 opts = {
-  work_unit_type: OpenapiClient::WorkUnitType.new, # WorkUnitType | Filters by type
-  work_unit_status: OpenapiClient::WorkUnitStatus.new # WorkUnitStatus | Filters by status
+  work_unit_type: Tecniplast::WorkUnitType.new, # WorkUnitType | Filters by type
+  work_unit_status: Tecniplast::WorkUnitStatus.new, # WorkUnitStatus | Filters by status
+  planned_date: 'planned_date_example', # String | Filter by planned date, in ISO 8601 format
+  start: 0, # Integer | page start
+  size: 1000 # Integer | page size
 }
 
 begin
   #get list of tasks planned for today
   result = api_instance.jobs_get(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue Tecniplast::ApiError => e
   puts "Exception when calling TasksApi->jobs_get: #{e}"
 end
 ```
@@ -39,6 +42,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **work_unit_type** | [**WorkUnitType**](.md)| Filters by type | [optional] 
  **work_unit_status** | [**WorkUnitStatus**](.md)| Filters by status | [optional] 
+ **planned_date** | **String**| Filter by planned date, in ISO 8601 format | [optional] 
+ **start** | **Integer**| page start | [optional] [default to 0]
+ **size** | **Integer**| page size | [optional] [default to 1000]
 
 ### Return type
 
@@ -55,24 +61,28 @@ No authorization required
 
 
 
-# **jobs_uuid_complete_post**
-> jobs_uuid_complete_post(uuid)
+# **jobs_uuid_close_post**
+> jobs_uuid_close_post(uuid, user, opts)
 
 report task completion
 
 ### Example
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'tecniplast'
 
-api_instance = OpenapiClient::TasksApi.new
+api_instance = Tecniplast::TasksApi.new
 uuid = 'uuid_example' # String | id of task
+user = 'user_example' # String | username of the user performing the change
+opts = {
+  body: Tecniplast::Body.new # Body | 
+}
 
 begin
   #report task completion
-  api_instance.jobs_uuid_complete_post(uuid)
-rescue OpenapiClient::ApiError => e
-  puts "Exception when calling TasksApi->jobs_uuid_complete_post: #{e}"
+  api_instance.jobs_uuid_close_post(uuid, user, opts)
+rescue Tecniplast::ApiError => e
+  puts "Exception when calling TasksApi->jobs_uuid_close_post: #{e}"
 end
 ```
 
@@ -81,6 +91,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **String**| id of task | 
+ **user** | **String**| username of the user performing the change | 
+ **body** | [**Body**](Body.md)|  | [optional] 
 
 ### Return type
 
@@ -92,8 +104,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

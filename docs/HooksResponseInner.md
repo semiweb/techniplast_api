@@ -1,4 +1,4 @@
-# OpenapiClient::HooksResponseInner
+# Tecniplast::HooksResponseInner
 
 ## Properties
 Name | Type | Description | Notes

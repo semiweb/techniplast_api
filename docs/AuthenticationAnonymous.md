@@ -1,4 +1,4 @@
-# OpenapiClient::AuthenticationAnonymous
+# Tecniplast::AuthenticationAnonymous
 
 ## Properties
 Name | Type | Description | Notes

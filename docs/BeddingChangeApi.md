@@ -1,4 +1,4 @@
-# OpenapiClient::BeddingChangeApi
+# Tecniplast::BeddingChangeApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -9,26 +9,26 @@ Method | HTTP request | Description
 
 
 # **inventory_cages_ams_cage_id_bedding_change_full_post**
-> inventory_cages_ams_cage_id_bedding_change_full_post(ams_cage_id, opts)
+> inventory_cages_ams_cage_id_bedding_change_full_post(ams_cage_id, user, opts)
 
 report change of full cage (top+bottom)
 
 ### Example
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'tecniplast'
 
-api_instance = OpenapiClient::BeddingChangeApi.new
+api_instance = Tecniplast::BeddingChangeApi.new
 ams_cage_id = 'ams_cage_id_example' # String | id of cage to modify
+user = 'user_example' # String | username of the user performing the change
 opts = {
-  user: 'user_example', # String | id of the user performing the change
-  bedding_change_request: OpenapiClient::BeddingChangeRequest.new # BeddingChangeRequest | 
+  bedding_change_full_request: Tecniplast::BeddingChangeFullRequest.new # BeddingChangeFullRequest | 
 }
 
 begin
   #report change of full cage (top+bottom)
-  api_instance.inventory_cages_ams_cage_id_bedding_change_full_post(ams_cage_id, opts)
-rescue OpenapiClient::ApiError => e
+  api_instance.inventory_cages_ams_cage_id_bedding_change_full_post(ams_cage_id, user, opts)
+rescue Tecniplast::ApiError => e
   puts "Exception when calling BeddingChangeApi->inventory_cages_ams_cage_id_bedding_change_full_post: #{e}"
 end
 ```
@@ -38,8 +38,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ams_cage_id** | **String**| id of cage to modify | 
- **user** | **String**| id of the user performing the change | [optional] 
- **bedding_change_request** | [**BeddingChangeRequest**](BeddingChangeRequest.md)|  | [optional] 
+ **user** | **String**| username of the user performing the change | 
+ **bedding_change_full_request** | [**BeddingChangeFullRequest**](BeddingChangeFullRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -52,31 +52,31 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 
 # **inventory_cages_ams_cage_id_bedding_change_partial_post**
-> inventory_cages_ams_cage_id_bedding_change_partial_post(ams_cage_id, opts)
+> inventory_cages_ams_cage_id_bedding_change_partial_post(ams_cage_id, user, opts)
 
 report change of bottom part only
 
 ### Example
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'tecniplast'
 
-api_instance = OpenapiClient::BeddingChangeApi.new
+api_instance = Tecniplast::BeddingChangeApi.new
 ams_cage_id = 'ams_cage_id_example' # String | id of cage to modify
+user = 'user_example' # String | username of the user performing the change
 opts = {
-  user: 'user_example', # String | id of the user performing the change
-  bedding_change_request: OpenapiClient::BeddingChangeRequest.new # BeddingChangeRequest | 
+  bedding_change_partial_request: Tecniplast::BeddingChangePartialRequest.new # BeddingChangePartialRequest | 
 }
 
 begin
   #report change of bottom part only
-  api_instance.inventory_cages_ams_cage_id_bedding_change_partial_post(ams_cage_id, opts)
-rescue OpenapiClient::ApiError => e
+  api_instance.inventory_cages_ams_cage_id_bedding_change_partial_post(ams_cage_id, user, opts)
+rescue Tecniplast::ApiError => e
   puts "Exception when calling BeddingChangeApi->inventory_cages_ams_cage_id_bedding_change_partial_post: #{e}"
 end
 ```
@@ -86,8 +86,8 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ams_cage_id** | **String**| id of cage to modify | 
- **user** | **String**| id of the user performing the change | [optional] 
- **bedding_change_request** | [**BeddingChangeRequest**](BeddingChangeRequest.md)|  | [optional] 
+ **user** | **String**| username of the user performing the change | 
+ **bedding_change_partial_request** | [**BeddingChangePartialRequest**](BeddingChangePartialRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -100,7 +100,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 

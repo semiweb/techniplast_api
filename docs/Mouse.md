@@ -1,4 +1,4 @@
-# OpenapiClient::Mouse
+# Tecniplast::Mouse
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **ams_animal_name** | **String** |  | [optional] 
 **sex** | **String** |  | 
 **strain** | **String** |  | [optional] 
-**birth_date** | **String** |  | [optional] 
-**notes** | **String** |  | [optional] 
+**birth_date** | **Date** |  | [optional] 
 
 

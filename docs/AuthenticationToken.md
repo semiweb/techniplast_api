@@ -1,4 +1,4 @@
-# OpenapiClient::AuthenticationToken
+# Tecniplast::AuthenticationToken
 
 ## Properties
 Name | Type | Description | Notes

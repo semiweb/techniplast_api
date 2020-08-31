@@ -1,4 +1,4 @@
-# OpenapiClient::CageLabel
+# Tecniplast::CageLabel
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ams_protocol_id** | **String** |  | [optional] 
 **ams_researcher_id** | **String** |  | [optional] 
 **type** | [**CageType**](CageType.md) |  | 
-**ams_cage_name** | **String** |  | [optional] 
+**ams_cage_name** | **String** |  | 
 **mice** | [**Array&lt;Mouse&gt;**](Mouse.md) |  | 
 
 

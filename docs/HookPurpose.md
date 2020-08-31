@@ -1,4 +1,4 @@
-# OpenapiClient::HookPurpose
+# Tecniplast::HookPurpose
 
 ## Properties
 Name | Type | Description | Notes

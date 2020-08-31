@@ -1,4 +1,4 @@
-# OpenapiClient::HooksApi
+# Tecniplast::HooksApi
 
 All URIs are relative to *https://localhost/api/v2*
 
@@ -15,18 +15,18 @@ By posting on this endpoint you will register a subscriber to the DVC. One subsc
 ### Example
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'tecniplast'
 
-api_instance = OpenapiClient::HooksApi.new
+api_instance = Tecniplast::HooksApi.new
 opts = {
-  hooks_request: OpenapiClient::HooksRequest.new # HooksRequest | 
+  hooks_request: Tecniplast::HooksRequest.new # HooksRequest | 
 }
 
 begin
   #By posting on this endpoint you will register a subscriber to the DVC. One subscriber can receive different kinds of events
   result = api_instance.hooks_post(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue Tecniplast::ApiError => e
   puts "Exception when calling HooksApi->hooks_post: #{e}"
 end
 ```

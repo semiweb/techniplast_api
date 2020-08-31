@@ -1,4 +1,4 @@
-# OpenapiClient::HooksRequest
+# Tecniplast::HooksRequest
 
 ## Properties
 Name | Type | Description | Notes

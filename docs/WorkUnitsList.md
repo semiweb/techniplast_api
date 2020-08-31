@@ -1,4 +1,4 @@
-# OpenapiClient::WorkUnitsList
+# Tecniplast::WorkUnitsList
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# OpenapiClient::InlineResponse4041
+# Tecniplast::InlineResponse4041
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# OpenapiClient::LedBody
+# Tecniplast::LedBody
 
 ## Properties
 Name | Type | Description | Notes

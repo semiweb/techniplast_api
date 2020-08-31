@@ -1,4 +1,4 @@
-# OpenapiClient::CagePreparedEvent
+# Tecniplast::CagePreparedEvent
 
 ## Properties
 Name | Type | Description | Notes

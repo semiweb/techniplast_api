@@ -1,13 +1,9 @@
-# OpenapiClient::CagePosition
+# Tecniplast::CagePosition
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**facility** | **String** |  | [optional] 
-**building** | **String** |  | [optional] 
-**floor** | **String** |  | [optional] 
-**room** | **String** |  | [optional] 
-**rack** | **String** |  | [optional] 
-**position** | **String** |  | [optional] 
+**ams_rack_id** | **String** |  | [optional] 
+**position** | **String** |  | 
 
 
