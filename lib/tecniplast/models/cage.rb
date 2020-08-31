@@ -127,7 +127,7 @@ module Tecniplast
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] location Object to be assigned
     def location=(location)
-      validator = EnumAttributeValidator.new('String', ['RACK'])
+      validator = EnumAttributeValidator.new('String', ['RACK', 'UNKNOWN'])
       unless validator.valid?(location)
         fail ArgumentError, 'invalid value for "location", must be one of #{validator.allowable_values}.'
       end
