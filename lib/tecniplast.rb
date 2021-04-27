@@ -89,6 +89,20 @@ require 'tecniplast/models/work_unit'
 require 'tecniplast/models/work_unit_status'
 require 'tecniplast/models/work_unit_type'
 require 'tecniplast/models/work_units_list'
+#models for REM
+require 'tecniplast/models/alarm'
+require 'tecniplast/models/alarms_list'
+require 'tecniplast/models/appliance'
+require 'tecniplast/models/appliance_list'
+require 'tecniplast/models/measure'
+require 'tecniplast/models/measure_type'
+require 'tecniplast/models/measures_list'
+require 'tecniplast/models/measures_type_list'
+require 'tecniplast/models/profile'
+require 'tecniplast/models/profiles'
+require 'tecniplast/models/set_point'
+require 'tecniplast/models/set_point_search'
+require 'tecniplast/models/thresholds'
 
 # APIs
 require 'tecniplast/api/available_api'
@@ -99,6 +113,9 @@ require 'tecniplast/api/leds_api'
 require 'tecniplast/api/racks_api'
 require 'tecniplast/api/tasks_api'
 require 'tecniplast/api/users_api'
+# APIs for REM
+require 'tecniplast/api/appliances_api'
+require 'tecniplast/api/profiles_api'
 
 module Tecniplast
   class << self
