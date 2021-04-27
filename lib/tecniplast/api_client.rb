@@ -39,7 +39,7 @@ module Tecniplast
     end
 
     def self.default
-      @@default ||= ApiClient.new
+      ApiClient.new
     end
 
     # Call an API with given options.
