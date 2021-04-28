@@ -18,8 +18,6 @@ module Tecniplast
 
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
-      # Force api base path to different because the api url is different for the rem
-      @api_client.config.base_path = '/api/'
     end
     # Create profile
     # Create a new profile

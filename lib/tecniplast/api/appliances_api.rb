@@ -18,8 +18,6 @@ module Tecniplast
 
     def initialize(api_client = ApiClient.new)
       @api_client = api_client
-      # Force api base path to different because the api url is different for the rem
-      @api_client.config.base_path = '/api/'
     end
     # Get alarms
     # Returns alarms for a single appliance, with actual timestamp > startTimestamp and <= endTimestamp <br> In case number of alarms is > 1000 only the first 1000 records will be returned

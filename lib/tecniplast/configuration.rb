@@ -23,6 +23,7 @@ module Tecniplast
     # Defines url base path
     attr_accessor :base_path
 
+    attr_accessor :api_version_path
     # Defines API keys used with API Key authentications.
     #
     # @return [Hash] key: parameter name, value: parameter value (API key)
@@ -130,7 +131,8 @@ module Tecniplast
     def initialize
       @scheme = 'https'
       @host = 'localhost'
-      @base_path = '/api/v2'
+      @base_path = '/api'
+      @api_version_path = '/v2'
       @api_key = {}
       @api_key_prefix = {}
       @timeout = 0

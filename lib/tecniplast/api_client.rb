@@ -39,7 +39,7 @@ module Tecniplast
     end
 
     def self.default
-      ApiClient.new
+      @@default ||= ApiClient.new
     end
 
     # Call an API with given options.
@@ -47,6 +47,12 @@ module Tecniplast
     # @return [Array<(Object, Fixnum, Hash)>] an array of 3 elements:
     #   the data deserialized from response body (could be nil), response status code and response headers.
     def call_api(http_method, path, opts = {})
+      # check api origin to add data on path
+      api_name = opts[:operation].to_s.split('.')[0]
+      unless %w{AppliancesApi ProfilesApi}.include? api_name
+        path = self.config.api_version_path + path
+      end
+
       request = build_request(http_method, path, opts)
       response = request.run
 
